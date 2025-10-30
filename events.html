@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events - University Events Portal</title>
+  </head>
+  <body>
+    <!-- nav bar -->
+    <header>
+      <nav>
+        <h1>UniEvents</h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Explore events</h2>
+        <h4>Look for events, workshops, confrences, seminars and much more</h4>
+
+        <!-- search and filter -->
+        <form>
+          <label for="search">Search Events:</label>
+          <input
+            type="text"
+            id="search"
+            name="search"
+            placeholder="Enter the event name..."
+          />
+
+          <label for="university">Filter by University:</label>
+          <select id="university" name="university">
+            <option value="">All Universities</option>
+            <option value="aou">Arab Open University</option>
+            <option value="kcst">Kuwait College of Science & Technology</option>
+            <option value="ku">Kuwait University</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="type">Filter by Type:</label>
+          <select id="type" name="type">
+            <option value="">All Categories</option>
+            <option value="conference">Conference</option>
+            <option value="hackathon">Hackathon</option>
+            <option value="workshop">Workshop</option>
+            <option value="seminar">Seminar</option>
+            <option value="career-fair">Career Fair</option>
+          </select>
+
+          <button type="submit">Apply Filters</button>
+        </form>
+      </section>
+
+      <!-- Events -->
+      <section>
+        <h3>All Events</h3>
+
+        <!-- Event 1 CERC 2025 -->
+        <article class="event-card" style="border: 1px solid black">
+          <img
+            src="./assets/images/CERC.PNG"
+            alt="CERC 2025 Conference"
+            style="width: 250px; height: auto"
+          />
+          <p><strong>Conference</strong></p>
+          <h3>
+            CERC 2025 - The 7th Cybersecurity Education & Research Conference
+          </h3>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="vertical-align: middle; margin-right: 6px"
+            >
+              <path
+                d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
+              ></path>
+              <path d="M22 10v6"></path>
+              <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+            </svg>
+            <strong>University:</strong> Kuwait College of Science & Technology
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="vertical-align: middle; margin-right: 6px"
+            >
+              <path d="M8 2v4"></path>
+              <path d="M16 2v4"></path>
+              <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+              <path d="M3 10h18"></path>
+            </svg>
+            <strong>Date:</strong> October 15-16, 2025
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="vertical-align: middle; margin-right: 6px"
+            >
+              <path
+                d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+              />
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <strong>Location:</strong> Auditorium & Lecture Hall
+          </p>
+          <button>
+            <a href="./event1Details.html">View Details</a>
+          </button>
+        </article>
+
+        <!-- Event 2 Digital Transformation Forum -->
+        <article class="event-card" style="border: 1px solid black">
+          <img
+            src="./assets/images/Digital Transformation forum.PNG"
+            alt="Korea Kuwait Digital Transformation Forum"
+            style="width: 250px; height: auto"
+          />
+          <p><strong>Conference</strong></p>
+          <h3>Korea Kuwait Digital Transformation Forum</h3>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="vertical-align: middle; margin-right: 6px"
+            >
+              <path
+                d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
+              ></path>
+              <path d="M22 10v6"></path>
+              <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+            </svg>
+            <strong>University:</strong> Arab Open University
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="vertical-align: middle; margin-right: 6px"
+            >
+              <path d="M8 2v4"></path>
+              <path d="M16 2v4"></path>
+              <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+              <path d="M3 10h18"></path>
+            </svg>
+            <strong>Date:</strong> October 22, 2025
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="vertical-align: middle; margin-right: 6px"
+            >
+              <path
+                d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+              />
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <strong>Location:</strong> Radisson Blue Hotel, Dasman Hall
+          </p>
+          <button>
+            <a href="./event2Details.html">View Details</a>
+          </button>
+        </article>
+
+        <!-- Event 3 AI Horizons Summit -->
+        <article class="event-card" style="border: 1px solid black">
+          <img
+            src="./assets/images/Ai summit.PNG"
+            alt="International Summit on AI Horizons"
+            style="width: 250px; height: auto"
+          />
+          <p><strong>Summit</strong></p>
+          <h3>International Summit on AI Horizons</h3>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="vertical-align: middle; margin-right: 6px"
+            >
+              <path
+                d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
+              ></path>
+              <path d="M22 10v6"></path>
+              <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+            </svg>
+            <strong>University:</strong> Arab Open University
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="vertical-align: middle; margin-right: 6px"
+            >
+              <path d="M8 2v4"></path>
+              <path d="M16 2v4"></path>
+              <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+              <path d="M3 10h18"></path>
+            </svg>
+            <strong>Date:</strong> November 12-13, 2025
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="vertical-align: middle; margin-right: 6px"
+            >
+              <path
+                d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+              />
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <strong>Location:</strong> To be announced
+          </p>
+          <button>
+            <a href="./event3Details.html">View Details</a>
+          </button>
+        </article>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 University Events Portal. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
