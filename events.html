@@ -53,12 +53,21 @@
           />
 
           <label for="university">Filter by University:</label>
-          <select id="university" name="university">
-            <option value="">All Universities</option>
-            <option value="aou">Arab Open University</option>
-            <option value="kcst">Kuwait College of Science & Technology</option>
-            <option value="ku">Kuwait University</option>
-            <option value="other">Other</option>
+          <select id="university" 
+                  name="university"  
+                  autocomplete="organization">
+            <option value="">Select your university</option>
+            <option value="Kuwait University">Kuwait University</option>
+            <option value="AUK">American University of Kuwait (AUK)</option>
+            <option value="GUST">Gulf University for Science and Technology (GUST)</option>
+            <option value="AUM">American University of the Middle East (AUM)</option>
+            <option value="KILAW">Kuwait International Law School (KILAW)</option>
+            <option value="ACK">Australian College of Kuwait (ACK)</option>
+            <option value="ACM">American College of the Middle East (ACM)</option>
+            <option value="PAAET">Public Authority for Applied Education and Training (PAAET)</option>
+            <option value="Kuwait Technical College">Kuwait Technical College</option>
+            <option value="Box Hill College Kuwait">Box Hill College Kuwait</option>
+            <option value="Other">Other</option>
           </select>
 
           <label for="type">Filter by Type:</label>
