@@ -110,7 +110,6 @@ hr {
   font-size: 24px;
   color: #0b1f3a;
   font-weight: bold;
-  margin: 30px;
   margin: 20px;
   gap: 15px;
 }
@@ -185,7 +184,6 @@ small {
   border: 1px solid #cbd5e1;
   border-radius: 8px;
 }
-
 
 .select:focus {
   outline: none;
@@ -429,5 +427,3 @@ small {
 .info-item p {
   margin: 2px 0;
 }
-
-
