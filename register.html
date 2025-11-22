@@ -1,177 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>University Events Portal - Register</title>
-</head>
-<body>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
     <header>
-        <h1>
-            <svg xmlns="http://www.w3.org/2000/svg" 
-                 width="32" 
-                 height="32" 
-                 viewBox="0 0 24 24" 
-                 fill="#3b82f6" 
-                 stroke="#1e40af" 
-                 stroke-width="2" 
-                 stroke-linecap="round" 
-                 stroke-linejoin="round">
-                <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path>
-                <path d="M22 10v6"></path>
-                <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
-            </svg>
-            UniEvents
+      <nav>
+        <h1 class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-graduation-cap h-6 w-6"
+          >
+            <path
+              d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
+            ></path>
+            <path d="M22 10v6"></path>
+            <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+          </svg>
+          UniEvents
         </h1>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="calendar.html">Calendar</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+
+        <ul class="nav-links">
+          <li><a href="home.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="events.html" class="nav-link active">Events</a></li>
+          <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main>
-        <section>
-            <h1>Event Registration</h1>
-            <p>Complete your registration below</p>
-        </section>
-                <form id="registrationForm">
-                    <br>
-                    <fieldset>
-                        <legend>Personal Information</legend>
-                        
-                        <p>
-                            <label for="name">Full Name *</label>
-                            <input type="text" 
-                                   id="name" 
-                                   name="name" 
-                                   required 
-                                   minlength="2" 
-                                   maxlength="100"
-                                   pattern="^[a-zA-Z]{2,100}$"
-                                   title="Please enter your full name"
-                                   autocomplete="name"
-                                   placeholder="Enter your name">
-                            <small>Enter your first and last name (2-100 characters)</small>
-                        </p>
+    <!-- Main Content -->
+    <main class="container">
+      <a href="eventDetails.html" class="back-link">← Back to Event</a>
 
-                        <p>
-                            <label for="email">Email Address *</label>
-                            <input type="email" 
-                                   id="email" 
-                                   name="email" 
-                                   required 
-                                   maxlength="254"
-                                   pattern=".*@.*"
-                                   title="Please enter a valid email address (e.g., user@example.com)"
-                                   autocomplete="email"
-                                   placeholder="email@example.com">
-                            <small>We'll send confirmation details to this email</small>
-                        </p>
+      <section>
+        <h1>Event Registration</h1>
+        <p>Complete your registration below</p>
 
-                        <p>
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" 
-                                   id="phone" 
-                                   name="phone" 
-                                   required 
-                                   minlength="8"
-                                   maxlength="20"
-                                   pattern="[0-9]{8,}"
-                                   title="Please enter a valid phone number"
-                                   autocomplete="tel"
-                                   placeholder="+965 999 67890">
-                            <small>Include country code if international</small>
-                        </p>
-
-                        <p>
-                            <label for="university">Your University *</label>
-                            <select id="university" 
-                                    name="university" 
-                                    required 
-                                    autocomplete="organization">
-                                <option value="">Select your university</option>
-                                <option value="Kuwait University">Kuwait University</option>
-                                <option value="AUK">American University of Kuwait (AUK)</option>
-                                <option value="GUST">Gulf University for Science and Technology (GUST)</option>
-                                <option value="AUM">American University of the Middle East (AUM)</option>
-                                <option value="KILAW">Kuwait International Law School (KILAW)</option>
-                                <option value="ACK">Australian College of Kuwait (ACK)</option>
-                                <option value="ACM">American College of the Middle East (ACM)</option>
-                                <option value="PAAET">Public Authority for Applied Education and Training (PAAET)</option>
-                                <option value="Kuwait Technical College">Kuwait Technical College</option>
-                                <option value="Box Hill College Kuwait">Box Hill College Kuwait</option>
-                                <option value="Other">Other</option>
-                            </select>
-                            <small>Select "Other" if your university isn't listed</small>
-                        </p>
-                    </fieldset>
-                        <br>
-                    <fieldset>
-                        <legend>Additional Information (Optional)</legend>
-                        
-                        <p>
-                            <label for="dietary">Dietary Requirements <em>(Optional)</em></label>
-                            <input type="text" 
-                                   id="dietary" 
-                                   name="dietary" 
-                                   maxlength="200"
-                                   placeholder="e.g., Vegetarian, No nuts">
-                            <small>Let us know about any food allergies or preferences (max 200 characters)</small>
-                        </p>
-                        <br>
-                        <p>
-                            <label for="comments">Additional Comments <em>(Optional)</em></label>
-                            <textarea id="comments" 
-                                      name="comments" 
-                                      rows="4" 
-                                      maxlength="500"
-                                      placeholder="Any questions or special requests?"></textarea>
-                            <small>Share any questions or accessibility needs (max 500 characters)</small>
-                        </p>
-                         <br>
-                        <p>
-                            <label>
-                                <input type="checkbox" 
-                                       id="terms" 
-                                       name="terms" 
-                                       required> 
-                                I agree to the <b>Terms and Conditions*</b> and <b>Privacy Policy*</b>
-                            </label>
-                            <small>You must agree to continue with registration</small>
-                        </p>
-
-                        <p>
-                            <label>
-                                <input type="checkbox" 
-                                       id="newsletter" 
-                                       name="newsletter" 
-                                       value="yes"> 
-                                Subscribe to our newsletter for event updates <em>(Optional)</em>
-                            </label>
-                            <small>Get notified about upcoming events and announcements</small>
-                        </p>
-                    </fieldset>
-
-                    <input type="hidden" name="event_id" value="1">
-                    <input type="hidden" name="csrf_token" value="abc123xyz">
-                    <input type="hidden" name="registration_date" value="2025-10-30">
-                    <br>
-                    <button type="button" onclick="if(document.getElementById('registrationForm').checkValidity()) { alert('✓ Registration Successful!'); location.href='home.html'; } else { document.getElementById('registrationForm').reportValidity(); }">Complete Registration</button>
-                </form>
-            </article>
-        </section>
+        <div class="card">
+          <form id="registrationForm" class="contact-form">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              minlength="2"
+              maxlength="100"
+              pattern="^[a-zA-Z ]{2,100}$"
+              placeholder="Enter your full name"
+            />
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              maxlength="254"
+              placeholder="email@example.com"
+            />
+            <label for="phone">Phone Number *</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              minlength="8"
+              maxlength="20"
+              pattern="[0-9]{8,}"
+              placeholder="+965 999 67890"
+            />
+            <small>Include country code if international</small>
+            <label for="university">Your University *</label>
+            <select
+              style="width: 100%"
+              class="select"
+              id="university"
+              name="university"
+              required
+            >
+              <option value="">Select your university</option>
+              <option value="Kuwait University">Kuwait University</option>
+              <option value="AUK">American University of Kuwait (AUK)</option>
+              <option value="GUST">GUST</option>
+              <option value="AUM">AUM</option>
+              <option value="KILAW">KILAW</option>
+              <option value="ACK">ACK</option>
+              <option value="ACM">ACM</option>
+              <option value="PAAET">PAAET</option>
+              <option value="Kuwait Technical College">
+                Kuwait Technical College
+              </option>
+              <option value="Box Hill College Kuwait">
+                Box Hill College Kuwait
+              </option>
+              <option value="Other">Other</option>
+            </select>
+            <!-- Hidden fields -->
+            <input type="hidden" name="event_id" value="1" />
+            <input type="hidden" name="csrf_token" value="abc123xyz" />
+            <input type="hidden" name="registration_date" value="2025-10-30" />
+            <!-- Submit -->
+            <a
+              type="button"
+              class="primary-btn"
+              onclick="if(document.getElementById('registrationForm').checkValidity()) {
+                                alert('✓ Registration Successful!');
+                                location.href='home.html';
+                            } else {
+                                document.getElementById('registrationForm').reportValidity();
+                            }"
+            >
+              Complete Registration
+            </a>
+          </form>
+        </div>
+      </section>
     </main>
 
-       <footer>
-            <p>&copy; 2025 University Events Portal. All rights reserved.</p>
-            <p>Connecting students across universities</p>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 University Events Portal. All rights reserved.</p>
+      <p>Connecting students across universities</p>
     </footer>
-</body>
-
+  </body>
 </html>
-
