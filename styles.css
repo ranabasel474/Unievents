@@ -171,6 +171,7 @@ small {
 .search-input:focus {
   outline: none;
   border-color: #cbd5e1;
+  color: #1a365d;
 }
 
 .select {
@@ -427,4 +428,5 @@ small {
 .info-item p {
   margin: 2px 0;
 }
+
 
