@@ -4,21 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>University Events Portal - Contact Us</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
+
   <body>
+    <!-- Header -->
     <header>
       <nav>
-        <h1>
+        <h1 class="logo">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="#3b82f6"
-            stroke="#1e40af"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="#ffffff"
             stroke-width="2"
             stroke-linecap="round"
-            stroke-linejoin="round"
           >
             <path
               d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
@@ -28,67 +30,82 @@
           </svg>
           UniEvents
         </h1>
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="calendar.html">Calendar</a></li>
-          <li><a href="contact.html">Contact</a></li>
+        <ul class="nav-links">
+          <li><a href="home.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
         </ul>
       </nav>
     </header>
 
+    <!-- General Section -->
+    <section class="gen bg-gradient-to-r from-blue-900 to-teal-400">
+      <h1 class="gen-title">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+        Contact Us
+      </h1>
+      <p class="gen-subtitle">
+        Send us a message or inquiry and we’ll get back to you as soon as
+        possible.
+      </p>
+    </section>
 
-    <main>
-      <section>
-        <!-- Contact Form -->
-        <article>
-          <h2>Send us a Message</h2>
+    <!-- Main Content -->
+    <main class="container">
+      <h2 class="section-title">Send a Message</h2>
+      <article class="card">
+        <form class="contact-form">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required
+          />
 
-          <form>
-            <label for="name"> Name: </label>
-            <br>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your full name"
-              required
-            />
-            <br>
-            <label for="email"> Email</label>
-            <br>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="your.email@example.com"
-              required
-            />
-            <br>
-            <label for="message"> Message:</label>
-            <br>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="How can we help you?"
-              required
-              rows="6"
-            ></textarea>
-            <br>
-            <button type="submit">Send Message</button>
-          </form>
-        </article>
-      </section>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="your.email@example.com"
+            required
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="How can we help you?"
+            required
+            rows="6"
+          ></textarea>
+
+          <button type="submit" class="primary-btn">Send Message</button>
+        </form>
+      </article>
     </main>
 
-       <footer>
-            <p>&copy; 2025 University Events Portal. All rights reserved.</p>
-            <p>Connecting students across universities</p>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 University Events Portal. All rights reserved.</p>
+      <p>Connecting students across universities</p>
     </footer>
   </body>
 </html>
-
-
-
-
