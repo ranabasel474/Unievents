@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Events Portal - Events</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="module" src="../Js/eventsCardsScript.js" defer></script>
+    <script type="module" src="../Js/filterScript.js" defer></script>
+  </head>
+
+  <body>
+    <!--Header-->
+    <header>
+      <nav>
+        <h1 class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
+            ></path>
+            <path d="M22 10v6"></path>
+            <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+          </svg>
+          UniEvents
+        </h1>
+
+        <ul class="nav-links">
+          <li><a href="home.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="events.html" class="nav-link active">Events</a></li>
+          <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Main Content-->
+    <main>
+      <section class="gen bg-gradient-to-r from-blue-900 to-teal-400">
+        <h1 class="gen-title">Explore Events</h1>
+        <p class="gen-subtitle">
+          Look for events, workshops, conferences, seminars and much more
+        </p>
+
+        <!--Search events-->
+        <!-- Search + Filters -->
+        <div class="form-container">
+          <form class="filters-form">
+            <div class="search-row">
+              <!-- Search Text -->
+              <input
+                type="text"
+                placeholder="Search events..."
+                class="search-input"
+                id="searchText"
+              />
+
+              <!-- Type Filter -->
+              <select class="select" id="typeSelect">
+                <option>All Categories</option>
+                <option>Conference</option>
+                <option>Workshop</option>
+                <option>Seminar</option>
+                <option>Career Fair</option>
+              </select>
+
+              <!-- University Filter -->
+              <select class="select" id="universitySelect">
+                <option value="">All Universities</option>
+                <option value="Kuwait University">Kuwait University</option>
+                <option value="AUK">American University of Kuwait (AUK)</option>
+                <option value="GUST">GUST</option>
+                <option value="AUM">AUM</option>
+                <option value="KILAW">KILAW</option>
+                <option value="ACK">ACK</option>
+                <option value="ACM">ACM</option>
+                <option value="PAAET">PAAET</option>
+                <option value="Kuwait Technical College">
+                  Kuwait Technical College
+                </option>
+                <option value="KCST">
+                  Kuwait College of Science ans Technology
+                </option>
+                <option value="Box Hill College Kuwait">
+                  Box Hill College Kuwait
+                </option>
+                <option value="Other">Other</option>
+              </select>
+
+              <!-- Search Button -->
+              <button type="button" class="primary-btn" id="searchBtn">
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!--Events-->
+      <section>
+        <h2 class="section-title">All Events</h2>
+        <div class="events-container" id="events-list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 University Events Portal. All rights reserved.</p>
+      <p>Connecting students across universities</p>
+    </footer>
+  </body>
+</html>

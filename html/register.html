@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Events Portal - Register</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="module" src="../Js/calendar.js"></script>
+    <script type="module" src="../Js/eventDetails.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <h1 class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-graduation-cap h-6 w-6"
+          >
+            <path
+              d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
+            ></path>
+            <path d="M22 10v6"></path>
+            <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+          </svg>
+          UniEvents
+        </h1>
+
+        <ul class="nav-links">
+          <li><a href="home.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="events.html" class="nav-link active">Events</a></li>
+          <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main Content -->
+    <main class="container">
+      <section>
+        <h1 class="section-title" style="margin-bottom: 5px">
+          Event Registration
+        </h1>
+        <p
+          class="section-title"
+          style="font-size: small; font-weight: normal; margin-top: 10px"
+        >
+          Complete your registration below
+        </p>
+
+        <div class="card">
+          <form id="registrationForm" class="contact-form">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              minlength="2"
+              maxlength="100"
+              pattern="^[a-zA-Z ]{2,100}$"
+              placeholder="Enter your full name"
+            />
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              maxlength="254"
+              placeholder="email@example.com"
+            />
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              minlength="8"
+              maxlength="20"
+              pattern="[0-9]{8,}"
+              placeholder="+965 999 67890"
+            />
+            <small>Include country code if international</small>
+            <label for="university">Your University</label>
+            <select
+              style="width: 100%"
+              class="select"
+              id="university"
+              name="university"
+              required
+            >
+              <option value="">Select your university</option>
+              <option value="Kuwait University">Kuwait University</option>
+              <option value="AUK">American University of Kuwait (AUK)</option>
+              <option value="GUST">GUST</option>
+              <option value="AUM">AUM</option>
+              <option value="KILAW">KILAW</option>
+              <option value="ACK">ACK</option>
+              <option value="ACM">ACM</option>
+              <option value="PAAET">PAAET</option>
+              <option value="Kuwait Technical College">
+                Kuwait Technical College
+              </option>
+              <option value="KCST">
+                Kuwait College of Science ans Technology
+              </option>
+              <option value="Box Hill College Kuwait">
+                Box Hill College Kuwait
+              </option>
+              <option value="Other">Other</option>
+            </select>
+
+            <!-- Hidden fields -->
+            <input type="hidden" name="event_id" value="1" />
+            <input type="hidden" name="csrf_token" value="abc123xyz" />
+            <input type="hidden" name="registration_date" value="2025-10-30" />
+            <!-- Submit -->
+            <a
+              type="button"
+              class="primary-btn"
+              style="margin-top: 13px"
+              onclick="if(document.getElementById('registrationForm').checkValidity()) {
+                                alert('✓ Registration Successful!');
+                                location.href='home.html';
+                            } else {
+                                document.getElementById('registrationForm').reportValidity();
+                            }"
+            >
+              Complete Registration
+            </a>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 University Events Portal. All rights reserved.</p>
+      <p>Connecting students across universities</p>
+    </footer>
+  </body>
+</html>
